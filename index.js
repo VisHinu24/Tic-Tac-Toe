@@ -36,6 +36,14 @@ function win_check(){
 
 
 }
+function draw_check() {
+    let boxtexts = document.getElementsByClassName("boxtext");
+    let filled = Array.from(boxtexts).every(boxtext => boxtext.innerText !== '');
+    if (filled && !isgameover) {
+        document.getElementsByClassName("info")[0].innerText = "Draw";
+        isgameover = true;
+    }
+}
 
 
 let boxes= document.getElementsByClassName("box");
@@ -51,6 +59,7 @@ Array.from(boxes).forEach(element =>{
             // play the audio
             tap.play();
             // check if anyone won
+            draw_check();
             win_check();
             if (!isgameover){
                 document.getElementsByClassName("info")[0].innerText = "Turn for "+ turn;
