@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #b6fdc8;
+    color: black !important;
+    font-family:  'Roboto', sans-serif;
+    height: 65px;
+    font-size: 24px;
+    display: flex;
+    padding: 0 12px ;
+    align-items: center;
+    align-content: center;
+
+}
+nav ul {
+    list-style-type : none;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Lucida Sans';
+    position: relative;
+
+}
+.box{
+    border: 2px solid black ;
+    font-size: 6vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(207, 255, 255);
+}
+.info{
+    font-size: 20px;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagebox img{
+    width: 0;
+    transition: width 800ms ease;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 24px ;
+    border-radius: 4px;
+    padding:  6px 4px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+
+}
+
+.line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
